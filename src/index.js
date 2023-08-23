@@ -49,6 +49,7 @@ function calcDieta() {
 const API_KEY = '4fb6M_Lcduwoq0tFds5fTNR9prkfuTibYC5HL56jaAQ';
 const API_BASE = 'https://chimeragpt.adventblocks.cc/api/v1';
 function sendDieta() {
+    document.querySelector('.loading').style.display = 'flex'
     const loadingIndicator = document.getElementById('loading-indicator');
     loadingIndicator.style.display = 'block';
     let cals = calcDieta();
@@ -114,6 +115,7 @@ function sendDieta() {
     }) 
     .then(response => response.json())
     .then(data => {
+    document.querySelector('.loading').style.display = 'none'
     loadingIndicator.style.display = 'none';
       // Aqui você pode extrair o valor do campo "content" da resposta
     const assistantMessage = data.choices[0].message.content;

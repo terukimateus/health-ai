@@ -14,11 +14,14 @@ body {
 .header {
   display: flex;
   align-items: center;
-  padding: 2em;
-  justify-content: space-around;
-  position: fixed;
-  background-color: #02060c;
+  z-index: 11111;
+  position: relative;
   width: 100%;
+  height: 6em;
+  display: flex;
+  justify-content: space-around;
+  background-color: #02060c;
+  padding: 1em;
   z-index: 99;
 }
 .header .logo a {
@@ -50,11 +53,15 @@ body {
   filter: brightness(100%);
 }
 
+#header-btn-logado {
+  display: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   padding: 1em;
 }
@@ -89,9 +96,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75vh;
-  position: absolute;
   width: 100%;
+  height: 100%;
 }
 .container-dieta .content-dieta {
   display: flex;
@@ -287,6 +293,12 @@ input:hover {
   position: relative;
 }
 
+.loading {
+  display: none;
+  height: 75vh;
+  align-items: center;
+}
+
 .loading-spinner {
   display: none;
   width: 40px;
@@ -310,6 +322,7 @@ input:hover {
   display: flex;
   flex-direction: column;
   width: 80vw;
+  height: 90vh;
   gap: 2em;
 }
 .dieta-table .user-info {
@@ -345,8 +358,8 @@ input:hover {
 
 @media screen and (max-width: 1024px) {
   .container {
-    padding-top: 10em;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    gap: 1em;
   }
   .container .content-img {
     display: flex;
@@ -358,9 +371,6 @@ input:hover {
   .container .content-text {
     text-align: center;
     width: 90%;
-  }
-  .container-dieta {
-    height: 100%;
   }
   .container-dieta .content-dieta {
     flex-direction: column;

@@ -35,9 +35,10 @@ function logout() {
 auth.onAuthStateChanged(user => {
     if (user) {
         // Usuário autenticado
-        header.remove(); // Remove o header padrão do DOM
+       document.getElementById('header-btn-logado').style.display = 'flex'
+       document.getElementById('header-btn-deslogado').remove()
     } else {
-        document.getElementById('header-logado').remove(); // Remove o header padrão do DOM
+        document.getElementById('header-btn-logado').remove(); // Remove o header padrão do DOM
     }
 });
 

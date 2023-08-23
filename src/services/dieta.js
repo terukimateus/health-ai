@@ -61,7 +61,7 @@ function refreshItens() {
     let caloriasTotais = null;
     for (let i = 0; i < linhas.length; i++) {
         if (linhas[i].startsWith("- Calorias:")) {
-            caloriasTotais = parseFloat(linhas[i].match(/- Calorias: (\d+\.\d+)/)[1]);
+            caloriasTotais = parseFloat(linhas[i].match(/- Calorias: (\d+\d+)/)[1]);
             break;
         }
     }

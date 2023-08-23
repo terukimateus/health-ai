@@ -16,14 +16,15 @@
             <div class="logo">
                 <a href="index.html"><h1>Health.ai</h1></a>
             </div>
-            <div class="header-btn">
+            <div id="header-btn-deslogado"class="header-btn">
                 <a href="login.html"><button class="login">Entrar</button></a>
                 <a href="signin.html"><button class="signin">Criar Conta</button></a>
             </div>
+            <div id="header-btn-logado"class="header-btn">
+                <a href="user.html"><button class="user-page"><i class="fa-solid fa-user"></i></button></a>
+                <button class="logout-btn">Sair</button>
+            </div>
         </div>
-
-        <!-- Script para carregar o header logado -->
-        <script src="src/elements/header-logado.js"></script>
     </div>
 
     <div class="container-dieta">
@@ -63,7 +64,9 @@
             
             <button onclick="proxInfo2()"id="next-btn" class="next-btn">Próximo</button>
         </div>
-        <div id="loading-indicator" class="loading-spinner"></div>
+        <div class="loading">
+            <div id="loading-indicator" class="loading-spinner"></div>
+        </div>
         <div id="table-container">
         </div>
     </div>
