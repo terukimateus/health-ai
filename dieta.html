@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte sua dieta | Health.ai</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="https://kit.fontawesome.com/276f9ca786.js" crossorigin="anonymous"></script>
+    <script type="module"src="src/services/firebase-auth.js"></script>
+    <script src="src/index.js" defer></script>
+</head>
+<body>
+    <div id="header-container">
+        <!-- Header padrão -->
+        <div id="header" class="header">
+            <div class="logo">
+                <a href="index.html"><h1>Health.ai</h1></a>
+            </div>
+            <div class="header-btn">
+                <a href="login.html"><button class="login">Entrar</button></a>
+                <a href="signin.html"><button class="signin">Criar Conta</button></a>
+            </div>
+        </div>
+
+        <!-- Script para carregar o header logado -->
+        <script src="src/elements/header-logado.js"></script>
+    </div>
+
+    <div class="container-dieta">
+        <div id="dieta-name"class="content-dieta">
+            <span id="dieta-error" class="error"></span>
+            <div class="content-name">
+                <h2>Qual seu nome?</h2>
+                <input type="text" id="name" required>
+            </div>
+            <div class="content-gen">
+                <h2>Gênero</h2>
+                <div class="content-gen-form">
+                    <input type="radio" name="genero" id="feminino" value="feminino">
+                    <label for="feminino">Feminino</label>
+
+                    <input type="radio" name="genero" id="masculino" value="masculino">
+                    <label for="masculino">Masculino</label>
+                </div>
+            </div>
+            <div class="content-infos">
+                <div class="content-infos-peso">
+                    <h2>Peso(kg)</h2>
+                    <input type="number" name="weight" id="weight" min="0" placeholder="kg">
+                </div>
+                <div class="content-infos-altura">
+                    <h2>Altura</h2>
+                    <input type="number" name="height" id="height" min="0" placeholder="cm">
+                </div>
+                <div class="content-infos-altura">
+                    <h2>Idade</h2>
+                    <input type="number" name="idade" id="idade" min="0" placeholder="0">
+                </div>
+            </div>
+
+            <button onclick="proxInfo()"id="next-btn" class="next-btn">Próximo</button>
+        </div>
+
+    </div>
+</body>
+</html>

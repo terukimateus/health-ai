@@ -1,0 +1,377 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #02060c;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  justify-content: space-around;
+  position: fixed;
+  background-color: #02060c;
+  width: 100%;
+  z-index: 99;
+}
+.header .logo a {
+  text-decoration: none;
+}
+.header .logo h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.header .header-btn button {
+  border: none;
+  padding: 1em;
+  border-radius: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.8s;
+  filter: brightness(55%);
+}
+.header .header-btn button.signin {
+  background-color: rgb(0, 255, 136);
+  color: black;
+  filter: brightness(100%);
+}
+.header .header-btn button.signin:hover {
+  background-color: rgb(0, 129, 69);
+}
+.header .header-btn button:hover {
+  filter: brightness(100%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 1em;
+}
+.container .content-img img {
+  width: 30em;
+}
+.container .content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 30%;
+}
+.container .content-text h1 {
+  font-size: 3em;
+}
+.container .content-text .content-btn {
+  width: 25%;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(0, 255, 136);
+  color: black;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.container .content-text .content-btn:hover {
+  background-color: rgb(0, 129, 69);
+}
+
+.container-dieta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  position: absolute;
+  width: 100%;
+}
+.container-dieta .content-dieta {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.container-dieta .content-dieta .content-name {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.container-dieta .content-dieta .content-name input {
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  transition: 0.8s;
+  background-color: transparent;
+  font-size: 1.5em;
+}
+.container-dieta .content-dieta .content-name input:hover {
+  border-bottom: 1px solid rgb(0, 255, 136);
+}
+.container-dieta .content-dieta .content-gen {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.container-dieta .content-dieta .content-gen .content-gen-form {
+  display: flex;
+  gap: 1em;
+}
+.container-dieta .content-dieta .content-gen .content-gen-form input {
+  width: fit-content;
+  cursor: pointer;
+  accent-color: rgb(0, 255, 136);
+}
+.container-dieta .content-dieta .content-gen .content-gen-form label {
+  cursor: pointer;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.container-dieta .content-dieta .content-infos {
+  display: flex;
+  gap: 1em;
+}
+.container-dieta .content-dieta .content-infos .content-infos-peso {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.container-dieta .content-dieta .content-infos .content-infos-altura {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.container-dieta .content-dieta .content-infos input {
+  width: 50%;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  padding: 0.5em;
+  transition: 0.8s;
+}
+.container-dieta .content-dieta .content-infos input:hover {
+  border-bottom: 1px solid rgb(0, 255, 136);
+}
+.container-dieta .content-dieta .content-infos input::-webkit-outer-spin-button,
+.container-dieta .content-dieta .content-infos input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  padding: 0.5em;
+  transition: 0.8s;
+}
+input:hover {
+  border-bottom: 1px solid rgb(0, 255, 136);
+}
+
+.next-btn {
+  padding: 1em;
+  font-size: 1em;
+  color: black;
+  border-radius: 15px;
+  border: none;
+  width: 30%;
+  background-color: #00ff88;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.next-btn:hover {
+  background-color: rgb(0, 129, 69);
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.form .error span {
+  background-color: transparent;
+  color: red;
+}
+.form .login-submit {
+  width: 100%;
+  height: 3em;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(0, 255, 136);
+  color: black;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.form .login-submit:hover {
+  background-color: rgb(0, 129, 69);
+}
+.form a {
+  width: fit-content;
+  background-color: transparent;
+  border-radius: 12px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.7s;
+  filter: brightness(55%);
+  text-decoration: none;
+}
+.form a:hover {
+  filter: brightness(100%);
+}
+.form .google-login {
+  width: fit-content;
+  background-color: transparent;
+  border-radius: 12px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.7s;
+  filter: brightness(55%);
+}
+.form .google-login:hover {
+  filter: brightness(100%);
+}
+
+#header-logado .header-btn .user-page {
+  background-color: #00ff88;
+}
+#header-logado .header-btn .user-page i {
+  background-color: transparent;
+}
+
+.content-obj-form {
+  display: flex;
+  gap: 1em;
+}
+.content-obj-form input {
+  width: fit-content;
+  cursor: pointer;
+  accent-color: rgb(0, 255, 136);
+}
+.content-obj-form label {
+  cursor: pointer;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.content-obj-form select {
+  background-color: #02060c;
+}
+
+#dieta-error {
+  color: red;
+  position: relative;
+}
+
+.loading-spinner {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #f3f3f3; /* Cor da borda */
+  border-top: 4px solid #00ff88; /* Cor da borda superior */
+  animation: spin 2s linear infinite; /* Nome da animação, duração, tipo de animação e repetição */
+  margin: 0 auto; /* Centralizar horizontalmente */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.dieta-table {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  gap: 2em;
+}
+.dieta-table .user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #008b4a;
+  gap: 2em;
+  padding: 1em;
+  border-radius: 15px;
+}
+.dieta-table .dieta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 15px;
+  background-color: #008b4a;
+}
+.dieta-table .dieta-info .dieta-info-ref {
+  background-color: #00ff88;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+.dieta-table .dieta-info .dieta-info-ref h2 {
+  color: black;
+  font-weight: 900;
+}
+.dieta-table .dieta-info .dieta-info-ref span {
+  color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-top: 10em;
+    flex-direction: column-reverse;
+  }
+  .container .content-img {
+    display: flex;
+    justify-content: center;
+  }
+  .container .content-img img {
+    width: 100%;
+  }
+  .container .content-text {
+    text-align: center;
+    width: 90%;
+  }
+  .container-dieta {
+    height: 100%;
+  }
+  .container-dieta .content-dieta {
+    flex-direction: column;
+    padding: 2em;
+  }
+  .container-dieta .content-dieta .content-obj-form {
+    flex-direction: column;
+  }
+  .container-dieta .content-dieta .content-infos {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

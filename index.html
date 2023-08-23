@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health.ai</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="https://kit.fontawesome.com/276f9ca786.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,400;10..48,600;10..48,700;10..48,800&display=swap" rel="stylesheet">
+    <script type="module" src="src/services/firebase-auth.js"></script>
+<body>    
+    <div id="header-container">
+        <!-- Header padrão -->
+        <div id="header" class="header">
+            <div class="logo">
+                <a href="index.html"><h1>Health.ai</h1></a>
+            </div>
+            <div class="header-btn">
+                <a href="login.html"><button class="login">Entrar</button></a>
+                <a href="signin.html"><button class="signin">Criar Conta</button></a>
+            </div>
+        </div>
+
+        <!-- Script para carregar o header logado -->
+        <script src="src/elements/header-logado.js"></script>
+    </div>
+
+    <div class="container">
+        <div class="content-text">
+            <h1>Faça sua própria dieta!</h1>
+            <p>A primeira inteligência artificial que te ajuda a montar a própria dieta, baseado nos seus objetivos e escolhas!</p>
+            <a href="dieta.html"><button class="content-btn">Crie sua dieta!</button></a>
+        </div>
+        <div class="content-img">
+            <img src="src/img/healthai.png" alt="healthai">
+        </div>
+    </div>
+</body>
+</html>

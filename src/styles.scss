@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #02060c;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    justify-content: space-around;
+    position: fixed;
+    background-color: #02060c;
+    width: 100%;
+    z-index: 99;
+
+    .logo {
+        a {
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+    }
+
+    .header-btn {
+        button {
+            border: none;
+            padding: 1em;
+            border-radius: 15px;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 1em;
+            transition: 0.8s;
+            filter: brightness(55%);
+        }
+        button.signin {
+            background-color: rgb(0, 255, 136);
+            color: black;
+            filter: brightness(100%);
+        }
+        button.signin:hover {
+            background-color: rgb(0, 129, 69) ;
+        }
+        button:hover {
+            filter:brightness(100%)
+        }
+    
+        
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 1em;
+
+    .content-img {
+        img {
+            width: 30em;
+        }
+    }
+
+    .content-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 30%;
+        h1 {
+            font-size: 3em;
+        }
+        .content-btn {
+            width: 25%;
+            padding: 0.5em;
+            font-size: 1em;
+            border-radius: 12px;
+            border: none;
+            background-color: rgb(0, 255, 136);
+            color: black;
+            cursor: pointer;
+            transition: 0.7s;
+        }
+        .content-btn:hover {
+            background-color: rgb(0, 129, 69) ;
+        }
+    }
+}
+
+.container-dieta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    position: absolute;
+    width: 100%;
+    .content-dieta {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .content-name {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            input {
+                padding: 0.5em;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid white;
+                transition: 0.8s;
+                background-color: transparent;
+                font-size: 1.5em;
+            }
+            input:hover {
+                border-bottom: 1px solid rgb(0, 255, 136) ;
+            }
+        }
+        .content-gen {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .content-gen-form {
+                display: flex;
+                gap: 1em;
+                input {
+                    width: fit-content;
+                    cursor: pointer;
+                    accent-color: rgb(0, 255, 136);
+                }
+    
+                label {
+                    cursor: pointer;
+                    font-family: 'Bricolage Grotesque', sans-serif;
+                }
+            }
+        }
+        .content-infos {
+            display: flex;
+            gap: 1em;
+            .content-infos-peso {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+            .content-infos-altura {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+            input {
+                width: 50%;
+                font-size: 1.2em;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid white;
+                outline: none;
+                padding: 0.5em;
+                transition: 0.8s;
+
+                &:hover {
+                    border-bottom: 1px solid rgb(0, 255, 136);
+                }
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+}
+
+input {
+    width: 100%;
+    font-size: 1.2em;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    padding: 0.5em;
+    transition: 0.8s;
+
+    &:hover {
+        border-bottom: 1px solid rgb(0, 255, 136);
+    }
+}
+
+.next-btn {
+    padding: 1em;
+    font-size: 1em;
+    color: black;
+    border-radius: 15px;
+    border: none;
+    width: 30%;
+    background-color: #00ff88;
+    cursor: pointer;
+    transition: 0.8s;
+    &:hover {
+        background-color: rgb(0, 129, 69);
+    }
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+
+        .error {
+            span {
+                background-color: transparent;
+                color: red;
+            }
+        }
+        .login-submit {
+            width: 100%;
+            height: 3em;
+            padding: 0.5em;
+            font-size: 1em;
+            border-radius: 12px;
+            border: none;
+            background-color: rgb(0, 255, 136);
+            color: black;
+            cursor: pointer;
+            transition: 0.7s;
+
+            &:hover {
+                background-color: rgb(0, 129, 69) ;
+            }
+        }
+        a {
+            width: fit-content;
+            background-color: transparent;
+            border-radius: 12px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.7s;
+            filter:brightness(55%);
+            text-decoration: none;
+
+            &:hover {
+                filter:brightness(100%)
+            }
+        }
+        .google-login {
+            width: fit-content;
+            background-color: transparent;
+            border-radius: 12px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.7s;
+            filter:brightness(55%);
+
+            &:hover {
+                filter:brightness(100%)
+            }
+        }
+    }
+
+    #header-logado {
+        .header-btn {
+            .user-page {
+                background-color: #00ff88;
+
+                i {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .content-obj-form {
+        display: flex;
+        gap: 1em;
+        input {
+            width: fit-content;
+            cursor: pointer;
+            accent-color: rgb(0, 255, 136);
+        }
+
+        label {
+            cursor: pointer;
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+        select {
+            background-color: #02060c;
+        }
+    }
+    
+    #dieta-error {
+        color: red;
+        position: relative;
+    }
+
+    .loading-spinner {
+        display: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 4px solid #f3f3f3; /* Cor da borda */
+        border-top: 4px solid #00ff88; /* Cor da borda superior */
+        animation: spin 2s linear infinite; /* Nome da animação, duração, tipo de animação e repetição */
+        margin: 0 auto; /* Centralizar horizontalmente */
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .dieta-table {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        gap: 2em;
+        .user-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #008b4a;
+            gap: 2em;
+            padding: 1em;
+            border-radius: 15px;
+        }
+        .dieta-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            padding: 1em;
+            border-radius: 15px;
+            background-color: #008b4a;
+
+            .dieta-info-ref {
+                background-color: #00ff88;
+                padding: 0.5em;
+                border-radius: 10px;
+
+                h2 {
+                    color: black;
+                    font-weight: 900;
+                }
+                span {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .container {
+            padding-top: 10em;
+            flex-direction: column-reverse;
+            .content-img {
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 100%;
+                }
+            }
+            .content-text {
+                text-align: center;
+                width: 90%;
+            }
+        }
+
+        .container-dieta {
+            height: 100%;
+            .content-dieta {
+                flex-direction: column;
+                padding: 2em;
+                .content-obj-form {
+                    flex-direction: column;
+                }
+                .content-infos {
+                    flex-direction: column;
+                }
+            }
+        }
+        
+    }

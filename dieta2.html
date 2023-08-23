@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte sua dieta | Health.ai</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="https://kit.fontawesome.com/276f9ca786.js" crossorigin="anonymous"></script>
+    <script type="module"src="src/services/firebase-auth.js"></script>
+    <script src="src/index.js" defer></script>
+</head>
+<body>
+    <div id="header-container">
+        <!-- Header padrão -->
+        <div id="header" class="header">
+            <div class="logo">
+                <a href="index.html"><h1>Health.ai</h1></a>
+            </div>
+            <div class="header-btn">
+                <a href="login.html"><button class="login">Entrar</button></a>
+                <a href="signin.html"><button class="signin">Criar Conta</button></a>
+            </div>
+        </div>
+
+        <!-- Script para carregar o header logado -->
+        <script src="src/elements/header-logado.js"></script>
+    </div>
+
+    <div class="container-dieta">
+
+        <div id="dieta-info"class="content-dieta">
+            <span id="dieta-error" class="error"></span>
+            <div class="content-gen">
+                <h2>Qual seu objetivo?</h2>
+                <div class="content-obj-form">
+                    <input type="radio" name="objetivo" id="hipertrofia" value="hipertrofia">
+                    <label for="hipertrofia">Hipertrofia</label>
+
+                    <input type="radio" name="objetivo" id="gordura" value="gordura">
+                    <label for="gordura">Perder gordura</label>
+
+                    <input type="radio" name="objetivo" id="massagordura" value="massagordura">
+                    <label for="massagordura">Ganho de massa e perca de gordura</label>
+
+                    <input type="radio" name="objetivo" id="manutencao" value="manutencao">
+                    <label for="manutencao">Manutenção/Manter Peso</label>
+                </div>
+            </div>
+
+            <div class="content-gen">
+                <h2>Você faz atividade física?</h2>
+                <div class="content-obj-form">
+                    <select id="atividade"name="atividade">
+                        <option value="sedentario">Não faço atividade física.</option>
+                        <option value="pouco">Pouco ativo(1x a 3x na semana)</option>
+                        <option value="moderadamente">Moderadamente ativo(3x a 5x na semana)</option>
+                        <option value="muito">Muito ativo(6x a 7x na semana)</option>
+                        <option value="extramamente">Extremamente ativo(2x ao dia)</option>
+                    </select>
+                </div>
+            </div>
+
+            
+            <button onclick="proxInfo2()"id="next-btn" class="next-btn">Próximo</button>
+        </div>
+        <div id="loading-indicator" class="loading-spinner"></div>
+        <div id="table-container">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de dieta | Health.ai</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="https://kit.fontawesome.com/276f9ca786.js" crossorigin="anonymous"></script>
+    <script type="module"src="src/services/firebase-auth.js"></script>
+    <script src="src/index.js" defer></script>
+    <script src="src/services/dieta.js" defer></script>
+</head>
+<body>
+    <div id="header-container">
+        <!-- Header padrão -->
+        <div id="header" class="header">
+            <div class="logo">
+                <a href="index.html"><h1>Health.ai</h1></a>
+            </div>
+            <div class="header-btn">
+                <a href="login.html"><button class="login">Entrar</button></a>
+                <a href="signin.html"><button class="signin">Criar Conta</button></a>
+            </div>
+        </div>
+
+        <!-- Script para carregar o header logado -->
+        <script src="src/elements/header-logado.js"></script>
+    </div>
+
+    <div class="container">
+        <div class="dieta-table">
+            <div class="user-info">
+                <div class="user-info">
+                    <div class="user-info-name">
+                        <h3>Nome</h3>
+                        <span class="user-name"></span>
+                    </div>
+                    <div class="user-info-gen">
+                        <h3>Gênero</h3>
+                        <span class="user-gen"></span>
+                    </div>
+                    <div class="user-info-age">
+                        <h3>Idade</h3>
+                        <span class="user-age"></span>
+                    </div>
+                </div>
+                <h2>Health.ai</h2>
+            </div>
+
+            <div class="dieta-info">
+                <div class="dieta-head">
+                    <h2>Plano alimentar</h2>
+                    <div class="dieta-head-info">
+                        <span id="calorias-info"></span>
+                    </div>
+                </div>
+                <div class="dieta-info-ref">
+                    <h2 class="ref-info">Café</h2>
+                    <span id="cafe" class="ref-alimentos"></span>
+                </div>
+                <div class="dieta-info-ref">
+                    <h2 class="ref-info">Almoço</h2>
+                    <span id='almoco'class="ref-alimentos"></span>
+                </div>
+                <div class="dieta-info-ref">
+                    <h2 class="ref-info">Lanche da Tarde</h2>
+                    <span id="cafe-tarde" class="ref-alimentos"></span>
+                </div>
+                <div class="dieta-info-ref">
+                    <h2 class="ref-info">Jantar</h2>
+                    <span id='jantar'class="ref-alimentos"></span>
+                </div>
+                <div class="dieta-info-ref">
+                    <h2 class="ref-info">Ceia</h2>
+                    <span id='ceia'class="ref-alimentos"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
